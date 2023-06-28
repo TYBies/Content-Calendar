@@ -7,7 +7,6 @@ import dev.toyhr.contentcalendar.reposirory.ContentRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
@@ -19,7 +18,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 
 	}
-
 	@Bean
 	CommandLineRunner commandLineRunner(ContentRepository repository){
 		return args -> {
@@ -36,5 +34,4 @@ public class Application {
 			repository.save(content);
 		};
 	}
-
 }
